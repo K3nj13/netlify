@@ -1,0 +1,314 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  z-index: 10;
+  position: fixed;
+  background: white;
+}
+
+.header-ttl {
+  font-size: 24px;
+  width: 80px;
+  margin-left: 30px;
+}
+
+.header-ttl:hover img{
+  opacity:0.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-nav-list {
+  display: flex;
+  font-weight: bold;
+  list-style: none;
+}
+
+.header-nav-item {
+  margin-right: 30px;
+}
+
+.header-nav-item:hover {
+  opacity:0.6;
+}
+
+.firstview {
+  padding-top: 70px;
+  width: 100%;
+  height: 250px;
+  position: relative;
+}
+
+.firstview__img {
+  background: url(../img/mv.png) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.firstview__catchcopy {
+  position: absolute;
+  top: 61%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  width: 80%;
+}
+
+.firstview__catchcopy--ja {
+  font-size: 30px;
+}
+
+.news {
+  height:310px;
+  width:100%;
+}
+
+.news__list {
+  width:75%;
+  margin:0 auto 0;
+  list-style: none;
+}
+
+.news__list--link {
+  background:white;
+  width:100%;
+  height:43px;
+  padding-top:24px;
+  border:1px solid black;
+  display:block;
+  margin-bottom: 10px;
+}
+
+.news__list--link:hover {
+  opacity:0.4;
+}
+
+.news__list--link--first {
+  margin-top: 80px;
+}
+
+.news__list--data {
+  margin-left:19px;
+}
+
+.news__list--detail {
+  margin-left:7px;
+  font-weight: bold;
+}
+
+.contact {
+  height:330px;
+  width:100%;
+  background:rgb(245, 244, 244);
+}
+
+.contact__ttl {
+  padding-top:90px;
+  text-align: center;
+  font-weight:bold;
+  font-size:30px;
+  margin-bottom: 25px;
+}
+
+.contact__content {
+  text-align: center;
+}
+
+.contact__link {
+  display: block;
+  margin: 43px auto 0;
+  width: 300px;
+  text-align: center;
+  padding: 15px 0;
+  background: rgb(168, 5, 27);
+  color: white;
+}
+
+.contact__link:hover {
+  opacity:0.4;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background: black;
+  color: white;
+}
+
+.footer-ttl {
+  font-size: 12px;
+  width: 110px;
+  margin-left: 85px;
+}
+
+.footer-nav {
+  margin-right: 82px;
+}
+
+.footer-nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.footer-nav-item {
+  font-size: 12px;
+  text-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.footer-nav-item:hover {
+  opacity:0.4;
+}
+
+.footer-nav-item:not(:last-child) {
+  margin-right: 25px;
+}
+
+.footer-nav-item:not(:last-child)::after {
+  content: "|";
+  position: absolute;
+  right: -35%;
+}
+
+.menu {
+  display:none;
+}
+
+.nav {
+  display:none;
+}
+
+@media screen and (max-width: 768px){
+.header-nav {
+  display:none;
+}
+
+.menu{
+  display:inline-block;
+  width: 36px;
+  height:32px;
+  cursor: pointer;
+  position: relative;
+  right: 30px;
+  top:0px;
+}
+
+.menu__line--top,
+.menu__line--middle,
+.menu__line--bottom {
+  display: inline-block;
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  position:absolute;
+  transition: 0.5s;
+}
+
+.menu__line--top {
+  top: 0;
+}
+
+.menu__line--middle {
+  top: 14px;
+}
+
+.menu__line--bottom {
+  bottom: 0;
+}
+
+.menu.open span:nth-of-type(1) {
+  top: 14px;
+  transform: rotate(45deg);
+}
+
+.menu.open span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.menu.open span:nth-of-type(3) {
+  top: 14px;
+  transform: rotate(-45deg);
+}
+
+.in{
+  transform: translateX(100%);
+}
+
+.nav__link {
+  text-decoration: none;
+  color: blue;
+  font-size:18px;
+}
+
+.nav {
+  display: inline-block;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top:0px;
+  left: -100%;
+  background:white;
+  transition: .7s;
+  text-align: center;
+}
+
+.nav ul{
+  padding-top: 80px;
+}
+
+.nav ul li{
+  list-style-type: none;
+  margin-top: 50px;
+}
+
+.footer {
+  height: 220px;
+  padding:10px 90px;
+}
+
+.footer-nav-list {
+  display: block;
+}
+
+.footer-nav-item:not(:last-child) {
+  margin-bottom: 18px;
+}
+
+.footer-nav-item:not(:last-child)::after {
+  content: "";
+}
+
+.news {
+  height:230px;
+}
+
+.news__list {
+  width:90%;
+}
+
+.news__list--link {
+  height:27px;
+  padding-top:15px;
+  font-size:14px;
+}
+
+.news__list--data {
+  margin-left:10px;
+}
+
+.news__list--detail {
+  margin-left:6px;
+}
+
+}

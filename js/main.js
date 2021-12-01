@@ -1,4 +1,6 @@
-const button = document.querySelector("button");
-button.addEventListener("click", function () {
-  alert("クリックされました");
+const target = document.getElementById("menu");
+target.addEventListener('click', () => {
+target.classList.toggle('open');
+const nav = document.getElementById("nav");
+nav.classList.toggle('in');
 });
